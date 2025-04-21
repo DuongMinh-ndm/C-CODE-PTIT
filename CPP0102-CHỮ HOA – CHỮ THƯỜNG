@@ -1,0 +1,17 @@
+#include<iostream>
+int main(){
+    int t;
+    std::cin>>t;
+    while(t--){
+        char a;
+        std::cin>>a;
+        if('A'<=a && a<= 'Z'){
+            a=a+32;
+        	std::cout<<a<<"\n";
+        }
+        else if('a'<=a && a<= 'z'){
+            a=a-32;
+        	std::cout<<a<<"\n";
+        }
+    }
+}
