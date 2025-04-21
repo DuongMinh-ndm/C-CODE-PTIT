@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+long long gcd(long long a, long long b){
+    while(b!=0){
+        long long temp=a%b; 
+        a=b;
+        b=temp;
+    }
+    return a;
+}
+long long lcm(long long a, long long b){
+    long long lcm=a*b/gcd(a,b);
+    return lcm;
+}
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        long long n;
+        cin>>n;
+        long long result=1;
+        for(long long i=1; i<=n; i++){
+            result=lcm(result,i);
+        }
+        cout<<result<<endl;
+    }
+}
