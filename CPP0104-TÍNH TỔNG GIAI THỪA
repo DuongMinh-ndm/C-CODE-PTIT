@@ -1,0 +1,12 @@
+#include<iostream>
+int main(){
+	long long n;
+	std::cin>>n;
+	long long x=1; 
+	long long sum=0;
+	for(long long i=1; i<=n; i++){
+		x=x*i;
+		sum+=x;
+	}
+	std::cout<<sum;
+}
