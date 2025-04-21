@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+long long GCD(long long a, long long b)
+{
+	while (b != 0)
+	{
+		long long r = a % b;
+		a = b;
+		b = r;
+	}
+	return a;
+}
+long long LCM(long long a, long long b)
+{
+	long long lcm = a * b / GCD(a, b);
+	return lcm;
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		long long a, b;
+		cin >> a;
+		cin >> b;
+		cout << LCM(a, b) << " " << GCD(a, b);
+		cout << "\n";
+	}
+}
