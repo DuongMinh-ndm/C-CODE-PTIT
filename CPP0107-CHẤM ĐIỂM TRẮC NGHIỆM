@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    string s1="ABBADCCABDCCABD", s2="ACCABCDDBBCDDBB";
+    cin>>t;
+    cin.ignore();
+    while(t--){
+        int n;
+        cin>>n;
+        char a[15];
+        int cnt=0;
+        for(int i=0; i<15; i++){
+            cin>>a[i];
+        }
+        if(n==101){
+            for(int i=0; i<15; i++){
+                if(a[i] == s1[i]){
+                ++cnt;
+                }
+            }
+        }
+        if(n==102){
+            for(int i=0; i<15; i++){
+                if(a[i] == s2[i]){
+                ++cnt;
+                }		
+            }
+        }
+        float diem=1.0*cnt*2/3;
+        cout<<fixed<<setprecision(2)<<diem<<"\n";
+    }
+}
